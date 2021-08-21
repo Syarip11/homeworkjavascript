@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- pengkodean karakter (character encoding) yang dominan untuk World Wide Web -->
+    <meta charset="utf-8">
+
+     <!-- judul di browser -->
+    <title>HomeWorkJavascript</title>
+
+    <!-- Untuk menyesuaikan device yang di gunakan -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- link nyambung ke boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- link ke css -->
+    <link rel="stylesheet" href="./style/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+  <body>
+    <div class="container">
+      <form class="text-center border border-light p-5">
+        <div class="h4 mb-4" id="date-part"></div>
+        <div class="h4 mb-4" id="time-part"></div>
+        <p class="h4 mb-4">Temperature Convertion</p>
+        <div class="h4 mb-12">
+          <select name="from" id="from" onchange="select()">
+            <option value="cel">Celcius</option>
+            <option value="far">Farenheit</option>
+            <option value="rea">Reamur</option>
+          </select>
+          to
+          <select name="to" id="to" onchange="select()">
+            <option value="cel">Celcius</option>
+            <option value="far">Farenheit</option>
+            <option value="rea">Reamur</option>
+          </select>
+        </div>
+        <input type="number" name="kmh" id="num1" class="form-control mb-4" placeholder="some number" onkeypress="validate(event)" onkeyup="conv()">
+        <p class="h6 mb-4">=</p>
+        <input type="number" id="result" class="form-control mb-4" placeholder="result" disabled="">
+      </form>
+      Change Background Color : <input class="form-control" id="color"><button type="button" class="btn btn-light" onclick="change()">
+        Change
+      </button>
+    </div>
+  
+  <script src="./src/convert.js"></script>
+  <script src="./src/script.js"></script>
+</body>
+</html>
